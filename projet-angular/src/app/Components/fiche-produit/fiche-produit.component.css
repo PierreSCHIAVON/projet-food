@@ -1,0 +1,178 @@
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+.flex-row-center {
+  display: flex;
+  justify-content: space-evenly;
+}
+.flex-row-center-space-betwee {
+  display: flex;
+  justify-content: space-evenly;
+    width: 80%;
+}
+img {
+  border-radius: 20px;
+  width: 100%;
+}
+/* .card-div {
+  background-color: white;
+  margin: 10px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  margin: auto;
+} */
+/* .bg-color {
+  background-color: white;
+} */
+/* .pd-20 {
+  padding: 20px;
+} */
+
+.mr-20 {
+  margin-right: 20px;
+}
+.mb-20 {
+  margin-bottom: 20px;
+}
+.m-auto-lr {
+  margin: 20px auto;
+}
+
+.w-8 {
+  width: 8rem;
+}
+.w-4 {
+  width: 4rem;
+}
+.h-4 {
+  height: 4rem;
+}
+.w75 {
+  width: 75%;
+}
+
+.nutriscore-A, .nova-group-1, .ecoscore-A {
+  background-color: #E8F4ED;
+}
+
+.nutriscore-A:hover, .nova-group-1:hover, .ecoscore-A:hover {
+  background-color: #d4f4e1;
+}
+
+.nutriscore-B, .ecoscore-B {
+  background-color: #EFF7E6;
+}
+
+.nutriscore-B:hover, .ecoscore-B:hover {
+  background-color: #e2f8c8;
+}
+
+.nutriscore-C, .nova-group-2, .ecoscore-C {
+  background-color: #F9F4E5;
+}
+
+.nutriscore-C:hover, .nova-group-2:hover, .ecoscore-C:hover {
+  background-color: #f8ebc5;
+}
+
+.nutriscore-D, .nova-group-3, .ecoscore-D {
+  background-color: #FCF1E7;
+}
+
+.nutriscore-D:hover, .nova-group-3:hover, .ecoscore-D:hover {
+  background-color: #f3dcc7;
+}
+
+
+.nutriscore-E, .nova-group-4, .ecoscore-E {
+  background-color: #FDEEEE;
+}
+
+.nutriscore-E:hover, .nova-group-4:hover, .ecoscore-E:hover {
+  background-color: #f7cdcd;
+}
+
+.score-null {
+  background-color: #c1c1c1;
+}
+
+.score-null:hover {
+  background-color: #9b9999;
+}
+
+
+
+
+/* la mienne */
+table,
+tr {
+  border-collapse: collapse;
+  width: 50%;
+  margin: auto;
+}
+th,
+td {
+  text-align: left;
+  padding: 8px;
+}
+tr:nth-child(even) {
+  background-color: #7c818017;
+}
+.liste {
+  display: none; /* cache la liste par défaut */
+}
+
+.liste.show {
+  display: block; /* affiche la liste quand la classe "show" est ajoutée */
+}
+.container {
+  display: flex;
+  flex-direction: column;
+
+  margin: 50px auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  width: 80%;
+}
+
+.child_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #ffffff;
+  box-shadow: 0 10px 4px rgba(40, 37, 37, 0.2);
+}
+.row{
+  display: flex;
+  flex-direction: row;
+}
+
+.child_container:hover  {
+  
+  background-color: #d8d8d8;
+  cursor: pointer;
+}
+.image{
+  margin-right: 0;
+  padding: auto;
+ 
+}
+
+.right-align {
+  margin-left: auto;
+}
+.flex-container {
+  display: flex;
+  align-items: center;
+
+}
+
+

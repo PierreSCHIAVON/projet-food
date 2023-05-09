@@ -1,0 +1,87 @@
+<div class="container">
+  <div class="child_container">
+    <div>
+    <img *ngIf="produit" [src]="produit.image_url" alt="" />
+  </div>
+  <div class="card-div bg-color pd-20">
+    <h1 *ngIf="produit && produit.product_name">Nom du produit : {{ produit.product_name }}</h1>
+    <P *ngIf="produit && produit.code">Code Barre :{{ produit.code }}</P>
+    <P *ngIf="produit && produit.quantity">Quantitée : {{ produit.quantity }}</P>
+    <P *ngIf="produit && produit.packaging">Conditionnement : {{ produit.packaging }}</P>
+    <P *ngIf="produit && produit.brands">Marques : {{ produit.brands }}</P>
+    <P *ngIf="produit && produit.categories">Catégories : {{ produit.categories }}</P>
+    <P *ngIf="produit && produit.labels">Labels, certifications, récompenses : {{ produit.labels }}</P>
+    <P *ngIf="produit && produit.origins_from_origins_field">Origine des ingrédients : {{ produit.origins_from_origins_field }}</P>
+    <P *ngIf="produit && produit.manufacturing_places">Lieux de fabrication ou de transformation : {{ produit.manufacturing_places }}</P>
+    <P *ngIf="produit && produit.emb_codes">Code de traçabilité : {{ produit.emb_codes }}</P>
+    <P *ngIf="produit && produit.link">Lien vers la page du produit sur le site officiel du fabricant : {{ produit.link }}</P>
+    <P *ngIf="produit && produit.stores">Magasins : {{ produit.stores }}</P>
+    <P *ngIf="produit && produit.countries">Pays de vente : {{ produit.countries }}</P>
+  </div>
+</div>
+</div>
+<div class="container">
+  <div class="child_container">
+  <h1 class="pd-20">Correspondance avec vos préférences</h1>
+  <div class="flex-row-center-space-betwee">
+    <div class="flex-row-center-space-betwee">
+      <div class="card-div bg-color pd-20" [ngClass]="{
+        'nutriscore-A': produit.nutriscore === 'a',
+        'nutriscore-B': produit.nutriscore === 'b',
+        'nutriscore-C': produit.nutriscore === 'c',
+        'nutriscore-D': produit.nutriscore === 'd',
+        'nutriscore-E': produit.nutriscore === 'e',
+        'score-null': produit.nutriscore === 'not-applicable'
+      }">
+        <a class="flex-row-center" href=""> <!-- renvoi vers la fiche santé -->
+          <img class="mr-20 w-8 h-4" *ngIf="produit && produit.nutriscore" [src]="'https://static.openfoodfacts.org/images/attributes/nutriscore-'
+           + produit.nutriscore + '.svg'" alt="Image nutriscore" />
+          <div *ngIf="produit && produit.nutriscore">
+            <h2>Nutri-score {{ produit.nutriscore | uppercase }}</h2>
+            <span id="descriptionScore">{{ nutriScorePhrase }}</span>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="flex-row-center-space-betwee">
+      <div class="card-div bg-color pd-20" [ngClass]="{
+        'nova-group-1': produit.nova === 1,
+        'nova-group-2': produit.nova === 2,
+        'nova-group-3': produit.nova === 3,
+        'nova-group-4': produit.nova === 4,
+        'score-null': produit.nova === 'unknown'
+      }">
+        <a class="flex-row-center" href=""> <!-- renvoi vers la fiche santé -->
+          <img class="mr-20 w-4 h-4" *ngIf="produit && produit.nova" [src]="'https://static.openfoodfacts.org/images/attributes/nova-group-'
+           + produit.nova + '.svg'" alt="Image novascore" />
+          <div *ngIf="produit && produit.nova">
+            <h4>Nova-score {{ produit.nova }}</h4>
+            <span id="descriptionScore">{{ novaScorePhrase }}</span>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="flex-row-center-space-betwee">
+      <div class="card-div bg-color pd-20"[ngClass]="{
+        'ecoscore-A': produit.ecoscore === 'a',
+        'ecoscore-B': produit.ecoscore === 'b',
+        'ecoscore-C': produit.ecoscore === 'c',
+        'ecoscore-D': produit.ecoscore === 'd',
+        'ecoscore-E': produit.ecoscore === 'e',
+        'score-null': produit.ecoscore === 'not-applicable'
+      }">
+        <a class="flex-row-center" href=""> <!-- renvoi vers la fiche santé -->
+          <img class="mr-20 w-8 h-4" *ngIf="produit && produit.ecoscore" [src]="'https://static.openfoodfacts.org/images/attributes/ecoscore-'
+           + produit.ecoscore + '.svg'" alt="Image ecoscore" />
+          <div *ngIf="produit && produit.ecoscore">
+            <h4>Eco-score {{ produit.ecoscore | uppercase }}</h4>
+            <span id="descriptionScore">{{ ecoScorePhrase }}</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!-- fiche-sante.html -->
+<app-sante></app-sante>

@@ -1,0 +1,24 @@
+<div class="loading" *ngIf="!products">
+    <img src="assets/image/loading-bar.gif" alt="Loading...">
+</div>
+
+
+
+<div *ngIf="products">
+    <div ngClass="display">
+            <li *ngFor="let product of products" ngClass="container" >
+                <div routerLink="produit/{{product.id}}">            
+                    <div ngClass="list_product_img"> <img src="{{product.image_small_url}}"></div>
+                    <div ngClass="list_product_name">{{product.product_name}} - {{product.brands}} - {{product.quantity}}</div>
+                    <div ngClass="list_product_sc">
+                        <img class ="nutriscore nutriscore-large" src='https://static.openfoodfacts.org/images/attributes/nutriscore-{{product.nutriscore_grade}}.svg'>
+                        <img class ="novascore" src='https://static.openfoodfacts.org/images/attributes/nova-group-{{product.nova_group}}.svg'>
+                        <img class ="ecoscore ecoscore-large" src='https://static.openfoodfacts.org/images/attributes/ecoscore-{{product.ecoscore_grade}}.svg'>
+                    </div>
+                </div>
+            </li>
+
+    </div>
+
+</div>
+

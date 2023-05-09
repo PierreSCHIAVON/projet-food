@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+  }
+  
+  .loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: white;
+  }
+
+  .display {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-left: 5%;
+    margin-top: 10px;
+  }
+  
+  .container {
+    margin-left: 10px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    float: left;
+    width: 100%;
+    border-radius: 15px;
+    height: 298px;
+    width: 315px;
+    background-color: white;
+    list-style-type: none;
+    box-shadow: 0px 15px 10px -15px #111;
+    border: none;
+    cursor: pointer;
+    
+  }
+  
+  .container:hover {
+    background-color: rgb(226, 226, 226);
+  
+  
+  }
+  
+  
+  .list_product_img {
+    width: 254px;
+    height: 144px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  
+  }
+  .list_product_img img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+  
+  }
+  
+  .list_product_name {
+    height: 62px;
+    margin-top: 0.2rem;
+    line-height: 20px;
+    padding-right: 8px;
+    padding-left: 8px;
+    font-size: 14px;
+    color: #000;
+    padding: 15px;
+    font-style: bold;
+  
+  }
+  
+  .list_product_sc {
+    max-width: 70%;
+    height: 42px;
+    float: left;
+    display: flex;
+    margin: 0;
+    margin-right: 10px;
+  
+  }
+  
+  .nutriscore-large {
+    max-width: 100%;
+    width: 70%;
+    padding-top: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+  
+  }
+  
+  .ecoscore-large {
+    max-width: 100%;
+    width: 70%;
+    height: auto;
+    padding-top: 10px;
+    margin-left: 10px;
+  
+  }
+  
+  .novascore {
+    max-width: 100%;
+    width: 90%;
+    margin: 0;
+    
+  }

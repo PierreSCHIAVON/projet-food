@@ -1,0 +1,13 @@
+
+    <div class="nav_bar">
+
+        <div class="image">
+            <img routerLink="" src="assets/off-logo-horizontal-light.svg" alt="Off logo">
+        </div>
+   
+        <div class="bar_recherche" >
+          <input  type="text" [(ngModel)]="chercheProduit" placeholder="Chercher un produit" (keyup.enter)="chercher()"  >
+          <button  (click)="chercher()" ></button>
+        </div>
+
+    </div>
